@@ -3,62 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumo Solutions - The Future of [Your App's Category]</title>
-    <meta name="description" content="Introducing the new app from Sumo Solutions, designed to [briefly describe the app's purpose].">
-    <meta name="keywords" content="Sumo Solutions, New App, [App Name], Mobile App">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Sumo Solutions - Driving Digital Transformation</title>
+    <meta name="description" content="Sumo Solutions is a premier technology partner, offering innovative and robust solutions in software development, cloud services, and digital strategy.">
+    <meta name="keywords" content="Sumo Solutions, Software Development, Cloud Solutions, IT Consulting, Digital Transformation">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
         .hero-section {
-            background: #f8f9fa;
-            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
             text-align: center;
         }
         .hero-section h1 {
-            font-size: 3.5rem;
             font-weight: 700;
+            font-size: 3.8rem;
         }
         .hero-section p {
-            font-size: 1.25rem;
-            color: #6c757d;
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 20px auto;
         }
-        .app-mockup {
-            max-width: 100%;
-            height: auto;
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
         }
-        .feature-icon {
+        .section-title h2 {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #0d6efd;
+            bottom: 0;
+            left: calc(50% - 30px);
+        }
+        .service-card {
+            background: #f8f9fa;
+            border: 0;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,.1);
+        }
+        .service-icon {
             font-size: 3rem;
             color: #0d6efd;
+            margin-bottom: 20px;
         }
-        .cta-section {
+        .about-section {
+            background-color: #f8f9fa;
+        }
+        .contact-section {
             background-color: #0d6efd;
             color: white;
-            padding: 80px 0;
         }
-        .cta-section h2 {
-            font-weight: 700;
+        .contact-section h2, .contact-section p {
+            color: white;
+        }
+        .contact-section .btn {
+            background-color: white;
+            color: #0d6efd;
+            font-weight: 600;
         }
         .footer {
             background-color: #343a40;
-            color: white;
+            color: #adb5bd;
             padding: 40px 0;
         }
+        .footer .footer-brand {
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+        }
         .footer a {
-            color: #f8f9fa;
+            color: #adb5bd;
             text-decoration: none;
         }
         .footer a:hover {
-            text-decoration: underline;
+            color: white;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">Sumo Solutions</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,10 +120,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -82,80 +135,80 @@
 
     <header class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h1>Your App's Catchy Headline Goes Here</h1>
-                    <p class="my-4">A compelling description of what your app does and why it's the best solution for your target audience.</p>
-                    <a href="#cta" class="btn btn-primary btn-lg me-3">Download Now</a>
-                    <a href="#features" class="btn btn-outline-secondary btn-lg">Learn More</a>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://via.placeholder.com/400x600.png?text=App+Screenshot" alt="App Mockup" class="app-mockup">
-                </div>
-            </div>
+            <h1>Powerful Solutions for Modern Challenges</h1>
+            <p>We are a dynamic team of thinkers, creators, and strategists dedicated to delivering robust technology solutions that drive growth and efficiency.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
         </div>
     </header>
 
-    <section id="features" class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-5">Key Features</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <i class="bi bi-phone-fill feature-icon"></i>
-                    <h3 class="mt-3">Feature One</h3>
-                    <p>Briefly describe the first amazing feature of your app.</p>
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code service-icon"></i>
+                        <h3 class="h5 fw-bold">Custom Software Development</h3>
+                        <p>We build scalable and secure software tailored to your specific business needs, from enterprise applications to innovative mobile platforms.</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <i class="bi bi-shield-lock-fill feature-icon"></i>
-                    <h3 class="mt-3">Feature Two</h3>
-                    <p>Explain another key benefit that will attract users.</p>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-cloud-upload-alt service-icon"></i>
+                        <h3 class="h5 fw-bold">Cloud & DevOps</h3>
+                        <p>Leverage the power of the cloud. We offer expert cloud migration, infrastructure management, and DevOps services to streamline your operations.</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <i class="bi bi-bar-chart-line-fill feature-icon"></i>
-                    <h3 class="mt-3">Feature Three</h3>
-                    <p>Highlight a third important feature that sets your app apart.</p>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-lightbulb service-icon"></i>
+                        <h3 class="h5 fw-bold">Digital Strategy & Consulting</h3>
+                        <p>Our strategic insights help you navigate the digital landscape, identifying opportunities for transformation and creating a roadmap for success.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cta" class="cta-section text-center">
+    <section id="about" class="py-5 about-section">
         <div class="container">
-            <h2 class="mb-4">Ready to Get Started?</h2>
-            <p class="lead mb-4">Download our app today and experience the difference.</p>
-            <a href="#" class="btn btn-light btn-lg me-3"><i class="bi bi-apple"></i> Download on the App Store</a>
-            <a href="#" class="btn btn-light btn-lg"><i class="bi bi-google-play"></i> Get it on Google Play</a>
-        </div>
-    </section>
-
-    <section id="about" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mx-auto text-center">
-                    <h2 class="mb-4">About Sumo Solutions</h2>
-                    <p class="lead">Sumo Solutions is a forward-thinking technology company dedicated to creating innovative and user-friendly mobile applications. Our mission is to solve real-world problems through elegant and efficient software. We are passionate about crafting exceptional digital experiences.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded shadow" alt="Team collaborating">
+                </div>
+                <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
+                    <div class="section-title text-start">
+                        <h2 style="left: 0; transform: translateX(0);">About Sumo Solutions</h2>
+                    </div>
+                    <p class="lead">Sumo Solutions was founded on the principle of strength in innovation. We believe that the right technology, expertly applied, can be a powerful force for any business.</p>
+                    <p>Our team comprises seasoned professionals with a passion for problem-solving. We partner with our clients, embedding ourselves in their challenges and delivering solutions that are not just effective, but truly transformative. We are committed to quality, integrity, and building lasting relationships.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="contact" class="py-5">
+    
+    <section id="contact" class="contact-section py-5">
         <div class="container text-center">
-            <h2 class="mb-4">Contact Us</h2>
-            <p class="lead">Have questions or want to partner with us? Reach out!</p>
-            <a href="mailto:contact@sumosols.com" class="btn btn-primary btn-lg">contact@sumosols.com</a>
+            <h2 class="mb-3">Let's Build Something Powerful Together</h2>
+            <p class="lead mb-4">Ready to discuss your next project? We're here to listen.</p>
+            <a href="mailto:contact@sumosols.com" class="btn btn-light btn-lg">
+                <i class="fas fa-envelope me-2"></i> contact@sumosols.com
+            </a>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container text-center">
+            <p class="footer-brand mb-2">Sumo Solutions</p>
             <p>&copy; 2025 Sumo Solutions. All Rights Reserved.</p>
-            <p>
+            <p class="mt-3">
                 <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
             </p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
