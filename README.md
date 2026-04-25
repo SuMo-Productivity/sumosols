@@ -23,7 +23,8 @@ GitHub Pages host.
 | `sitemap.xml` | Sitemap |
 | `CNAME` | GitHub Pages custom-domain config |
 | `CLAUDE.md` | Project rules for Claude Code sessions |
-| `_scripts/compute_sri.py` | One-shot helper to compute SRI hashes for CDN tags. Lives under `_scripts/` so Jekyll excludes it from the deployed site. |
+| `.nojekyll` | Disables Jekyll on GitHub Pages so files are served as-is (required for `.well-known/security.txt`) |
+| `_scripts/compute_sri.py` | One-shot helper to compute SRI hashes for CDN tags |
 
 ## Stack
 

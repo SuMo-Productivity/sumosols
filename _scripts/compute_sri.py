@@ -4,9 +4,10 @@ Used during site build to populate `integrity=` attributes in HTML.
 Run locally with:
     py _scripts/compute_sri.py
 
-Lives under `_scripts/` so Jekyll (the default GitHub Pages build) excludes
-it from the deployed site — directories starting with `_` are skipped.
-The script itself never runs on GitHub Pages; only its printed output is
+GitHub Pages is in `.nojekyll` mode, so this file IS served at
+https://www.sumosols.com/_scripts/compute_sri.py. That is intentional —
+the script contains no secrets, and serving it costs nothing. It never
+executes on the server; only its printed output (the hash strings) is
 copied into HTML.
 """
 

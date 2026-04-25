@@ -75,8 +75,20 @@ When upgrading Bootstrap or FontAwesome:
    `privacy.html`, `terms.html`, `404.html`).
 4. Test locally (`py -m http.server 8000`) before pushing.
 
-The `_scripts/` directory is Jekyll-excluded — it's tracked in git but
-not deployed to the public site.
+### `.nojekyll` and what gets served
+
+The repo contains a `.nojekyll` file at the root. This disables GitHub
+Pages' default Jekyll build and tells Pages to serve every file in the
+repo as-is. **This is required** — without it, Jekyll's default rules
+exclude dot-prefixed paths and `/.well-known/security.txt` returns 404.
+
+A consequence: nothing in this repo is hidden from the public site.
+`_scripts/compute_sri.py` is publicly accessible at
+`https://www.sumosols.com/_scripts/compute_sri.py`. That file contains
+no secrets — only a one-shot helper that fetches public CDN files and
+prints their SHA-384 hashes — but be aware that anything committed to
+this repo will be served. **Do not commit secrets, drafts, internal
+notes, or anything you would not want indexed by search engines.**
 
 ### Updating legal pages
 
