@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Responsible Disclosure — Sumo Solutions</title>
+  <meta name="description" content="Responsible disclosure policy for Sumo Solutions — how we report security issues to vendors and how to report security issues in our own products to us.">
+
+  <link rel="canonical" href="https://www.sumosols.com/responsible-disclosure.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <meta property="og:title" content="Responsible Disclosure — Sumo Solutions">
+  <meta property="og:description" content="Coordinated disclosure policy: how Sumo Solutions reports security issues to vendors, and how to report issues to us.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sumosols.com/responsible-disclosure.html">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet"
+        integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI"
+        crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">Sumo Solutions</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Security Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container content-container">
+    <h1>Responsible Disclosure</h1>
+    <p class="lead">This page covers two situations: when we report a security issue to a third-party vendor, and when someone reports a security issue in one of our own products to us.</p>
+
+    <h2>When we report to a vendor</h2>
+    <p>When our research line identifies a security issue in another company's application, we follow these steps:</p>
+    <ol>
+      <li><strong>Initial contact.</strong> A short, high-level email is sent to the developer contact address listed on the Google Play Store. We do not include technical detail in the first message, and the initial email will never contain exploit code, sensitive data, or step-by-step instructions that could enable harm.</li>
+      <li><strong>Acknowledgement.</strong> We wait for the vendor to confirm a point of contact for security communications. We do not publish, share, or sell findings during this period.</li>
+      <li><strong>Technical disclosure.</strong> Once a contact is confirmed, we share the affected component, the root cause, and a recommended fix.</li>
+      <li><strong>Remediation window.</strong> We give vendors reasonable time to remediate. We do not impose hard deadlines, and we do not threaten public disclosure to apply pressure.</li>
+      <li><strong>Follow-up.</strong> A maximum of two follow-ups are sent at least seven days apart. After 90 days with no response, the case is recorded as <em>no response</em>; we do not publish details unilaterally.</li>
+    </ol>
+    <p>We do not access real user accounts and limit any runtime testing to test accounts we create ourselves. If user data is incidentally observed while identifying that an access control is missing, we do not retain or analyse it; such data is deleted once the finding has been documented.</p>
+
+    <h2>If you received a disclosure email from us</h2>
+    <p>Please reply to the address from which we contacted you (typically <a href="mailto:research@sumosols.com">research@sumosols.com</a>) with the security contact for your team. We will share technical detail securely once a contact is confirmed. There is no obligation to engage us further; the disclosure is provided in good faith with no conditions attached.</p>
+
+    <h2>Reporting an issue in our own products</h2>
+    <p>If you believe you have found a security issue in a Sumo Solutions website or product, we appreciate the report. Please email <a href="mailto:research@sumosols.com">research@sumosols.com</a> with:</p>
+    <ul>
+      <li>A short description of the issue.</li>
+      <li>Steps to reproduce, where applicable.</li>
+      <li>Any URLs, request payloads, or screenshots that help us understand the impact.</li>
+    </ul>
+
+    <div class="policy-block">
+      <strong>Safe harbour.</strong> We will not pursue legal action against, or report to law enforcement, anyone who reports a security issue to us in good faith — provided that the reporter (a) does not access more data than necessary to demonstrate the issue, (b) does not modify or destroy data, (c) gives us a reasonable opportunity to remediate before any public disclosure, and (d) does not violate any applicable law in the course of testing.
+    </div>
+
+    <h2>Out of scope</h2>
+    <ul>
+      <li>Findings that depend on social engineering, physical access, or compromised user devices.</li>
+      <li>Reports based on outdated dependency versions without a working proof of concept demonstrating exploitability.</li>
+      <li>Best-practice recommendations not tied to a specific exploitable issue (e.g. "you should add HSTS").</li>
+      <li>Denial-of-service findings without a meaningful impact threshold.</li>
+    </ul>
+
+    <h2>Bounty &amp; affiliations</h2>
+    <p>We do not currently operate a paid bug bounty programme. We are happy to publicly acknowledge researchers who report valid issues to us, where they wish to be acknowledged.</p>
+    <p>Our research work is independent and is not conducted on behalf of, or in affiliation with, any bug bounty platform (HackerOne, Bugcrowd, Intigriti, or similar). We do not act as intermediaries between researchers and platforms.</p>
+
+    <h2>Machine-readable contact</h2>
+    <p>Our security contact information is also published in <a href="/.well-known/security.txt"><code>/.well-known/security.txt</code></a> per RFC 9116.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="footer-brand mb-0">Sumo Solutions</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <p class="mb-2">
+            <a href="/">Home</a> ·
+            <a href="research.html">Security Research</a> ·
+            <a href="privacy.html">Privacy</a> ·
+            <a href="terms.html">Terms</a>
+          </p>
+          <p class="mb-0 small">&copy; 2026 Sumo Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
+</body>
+</html>

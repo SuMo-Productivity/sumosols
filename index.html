@@ -1,215 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="RtyrOcZYRNxywXwjsNUFug0AY2QW6jippT3ktZDJEtE" />
-    <title>Sumo Solutions - Driving Digital Transformation</title>
-    <meta name="description" content="Sumo Solutions is a premier technology partner, offering innovative and robust solutions in software development, cloud services, and digital strategy.">
-    <meta name="keywords" content="Sumo Solutions, Software Development, Cloud Solutions, IT Consulting, Digital Transformations">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="RtyrOcZYRNxywXwjsNUFug0AY2QW6jippT3ktZDJEtE">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>Sumo Solutions — Software, Cloud, and Security Engineering</title>
+  <meta name="description" content="Custom software development, cloud and DevOps engineering, digital strategy, and independent mobile-application security research from Sumo Solutions.">
+  <meta name="keywords" content="Sumo Solutions, software development, cloud DevOps, mobile security research, Android security, responsible disclosure">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://www.sumosols.com/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-        }
-        .navbar {
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-        }
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
-        }
-        .hero-section h1 {
-            font-weight: 700;
-            font-size: 3.8rem;
-        }
-        .hero-section p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 20px auto;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-title h2 {
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 60px;
-            height: 3px;
-            background: #0d6efd;
-            bottom: 0;
-            left: calc(50% - 30px);
-        }
-        .service-card {
-            background: #f8f9fa;
-            border: 0;
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease-in-out;
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,.1);
-        }
-        .service-icon {
-            font-size: 3rem;
-            color: #0d6efd;
-            margin-bottom: 20px;
-        }
-        .about-section {
-            background-color: #f8f9fa;
-        }
-        .contact-section {
-            background-color: #0d6efd;
-            color: white;
-        }
-        .contact-section h2, .contact-section p {
-            color: white;
-        }
-        .contact-section .btn {
-            background-color: white;
-            color: #0d6efd;
-            font-weight: 600;
-        }
-        .footer {
-            background-color: #343a40;
-            color: #adb5bd;
-            padding: 40px 0;
-        }
-        .footer .footer-brand {
-            font-size: 1.5rem;
-            color: white;
-            font-weight: 600;
-        }
-        .footer a {
-            color: #adb5bd;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: white;
-        }
-    </style>
+  <meta property="og:title" content="Sumo Solutions">
+  <meta property="og:description" content="Independent technology firm: software development, cloud/DevOps, and mobile-application security research.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sumosols.com/">
+  <meta property="og:site_name" content="Sumo Solutions">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sumo Solutions">
+  <meta name="twitter:description" content="Independent technology firm: software development, cloud/DevOps, and mobile-application security research.">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet"
+        integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI"
+        crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Sumo Solutions</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">Sumo Solutions</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="research.html">Security Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <header class="hero-section">
-        <div class="container">
-            <h1>Powerful Solutions for Modern Challenges</h1>
-            <p>We are a dynamic team of thinkers, creators, and strategists dedicated to delivering robust technology solutions that drive growth and efficiency.</p>
-            <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
-        </div>
-    </header>
+  <header class="hero-section">
+    <div class="container">
+      <h1>Software, cloud, and security engineering — done with care.</h1>
+      <p>Sumo Solutions builds production software, runs cloud infrastructure, and conducts independent mobile-application security research.</p>
+      <a href="#contact" class="btn btn-light btn-lg">Get in touch</a>
+    </div>
+  </header>
 
-    <section id="services" class="py-5">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="fas fa-laptop-code service-icon"></i>
-                        <h3 class="h5 fw-bold">Custom Software Development</h3>
-                        <p>We build scalable and secure software tailored to your specific business needs, from enterprise applications to innovative mobile platforms.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="fas fa-cloud-upload-alt service-icon"></i>
-                        <h3 class="h5 fw-bold">Cloud & DevOps</h3>
-                        <p>Leverage the power of the cloud. We offer expert cloud migration, infrastructure management, and DevOps services to streamline your operations.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <i class="fas fa-lightbulb service-icon"></i>
-                        <h3 class="h5 fw-bold">Digital Strategy & Consulting</h3>
-                        <p>Our strategic insights help you navigate the digital landscape, identifying opportunities for transformation and creating a roadmap for success.</p>
-                    </div>
-                </div>
-            </div>
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="section-title"><h2>Services</h2></div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="fas fa-laptop-code service-icon"></i>
+            <h3 class="h5 fw-bold">Custom Software</h3>
+            <p>Backend services, web applications, and mobile clients designed for the long term. Typed languages, tests that run, clean handover documentation.</p>
+          </div>
         </div>
-    </section>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="fas fa-cloud-upload-alt service-icon"></i>
+            <h3 class="h5 fw-bold">Cloud &amp; DevOps</h3>
+            <p>Cloud migration, infrastructure-as-code, and CI/CD pipelines. We help teams ship safely on AWS and GCP without the meeting overhead.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="fas fa-lightbulb service-icon"></i>
+            <h3 class="h5 fw-bold">Digital Strategy</h3>
+            <p>Architecture review, technology selection, and engineering-team coaching for founders and product leaders deciding what to build next.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card">
+            <i class="fas fa-shield-halved service-icon"></i>
+            <h3 class="h5 fw-bold">Security Research</h3>
+            <p>Independent security review of Android applications. Static analysis, controlled dynamic testing, and coordinated disclosure to vendors. <a href="research.html">Learn more</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" class="py-5 about-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded shadow" alt="Team collaborating">
-                </div>
-                <div class="col-md-6 ps-md-5 mt-4 mt-md-0">
-                    <div class="section-title text-start">
-                        <h2 style="left: 0; transform: translateX(0);">About Sumo Solutions</h2>
-                    </div>
-                    <p class="lead">Sumo Solutions was founded on the principle of strength in innovation. We believe that the right technology, expertly applied, can be a powerful force for any business.</p>
-                    <p>Our team comprises seasoned professionals with a passion for problem-solving. We partner with our clients, embedding ourselves in their challenges and delivering solutions that are not just effective, but truly transformative. We are committed to quality, integrity, and building lasting relationships.</p>
-                </div>
-            </div>
+  <section id="about" class="py-5 about-section">
+    <div class="container">
+      <div class="section-title"><h2>About</h2></div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p class="lead">Sumo Solutions is a small, hands-on technology firm. We work with founders and engineering teams that want experienced hands on the keyboard rather than another deck.</p>
+          <p>Our engagements are small-batch by design — we take work where we can stay accountable end-to-end. That keeps quality high and communication direct.</p>
+          <p>Across all four service lines, the same principles apply: write code you can defend, document the decisions, leave the system better than you found it.</p>
         </div>
-    </section>
-    
-    <section id="contact" class="contact-section py-5">
-        <div class="container text-center">
-            <h2 class="mb-3">Let's Build Something Powerful Together</h2>
-            <p class="lead mb-4">Ready to discuss your next project? We're here to listen.</p>
-            <a href="mailto:contact@sumosols.com" class="btn btn-light btn-lg">
-                <i class="fas fa-envelope me-2"></i> contact@sumosols.com
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section py-5">
+    <div class="container text-center">
+      <h2 class="mb-3">Talk to us</h2>
+      <p class="lead mb-4">Tell us about the work. We aim to reply within two business days.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-3">
+          <div class="contact-card">
+            <h3 class="h6 fw-bold mb-2">General inquiries</h3>
+            <a href="mailto:contact@sumosols.com" class="contact-link">
+              <i class="fas fa-envelope me-2"></i>contact@sumosols.com
             </a>
+          </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container text-center">
-            <p class="footer-brand mb-2">Sumo Solutions</p>
-            <p>&copy; 2025 Sumo Solutions. All Rights Reserved.</p>
-            <p class="mt-3">
-                <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
-            </p>
+        <div class="col-md-5 mb-3">
+          <div class="contact-card">
+            <h3 class="h6 fw-bold mb-2">Security research &amp; responsible disclosure</h3>
+            <a href="mailto:research@sumosols.com" class="contact-link">
+              <i class="fas fa-shield-halved me-2"></i>research@sumosols.com
+            </a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="footer-brand mb-0">Sumo Solutions</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <p class="mb-2">
+            <a href="research.html">Security Research</a> ·
+            <a href="responsible-disclosure.html">Responsible Disclosure</a> ·
+            <a href="privacy.html">Privacy</a> ·
+            <a href="terms.html">Terms</a>
+          </p>
+          <p class="mb-0 small">&copy; 2026 Sumo Solutions. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
 </body>
 </html>
