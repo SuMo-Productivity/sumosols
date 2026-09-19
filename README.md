@@ -17,6 +17,7 @@ GitHub Pages host.
 | `terms.html` | Terms of Use |
 | `404.html` | Error page (GitHub Pages serves this on any 404) |
 | `assets/style.css` | Shared stylesheet |
+| `assets/og.png` | 1200x630 social share image (`og:image`) |
 | `favicon.svg` | Inline-SVG favicon |
 | `.well-known/security.txt` | RFC 9116 contact file for security reporters |
 | `robots.txt` | Crawler instructions |
@@ -24,14 +25,40 @@ GitHub Pages host.
 | `CNAME` | GitHub Pages custom-domain config |
 | `CLAUDE.md` | Project rules for Claude Code sessions |
 | `.nojekyll` | Disables Jekyll on GitHub Pages so files are served as-is (required for `.well-known/security.txt`) |
-| `_scripts/compute_sri.py` | One-shot helper to compute SRI hashes for CDN tags |
+| `_scripts/compute_sri.py` | Helper to compute SRI hashes for CDN tags (currently unused — no CDN assets) |
+| `_scripts/og-card.html` | Source for `assets/og.png`; re-export at 1200x630 after headline changes |
 
 ## Stack
 
-- Bootstrap 5.3.3 (CDN, with SRI integrity)
-- FontAwesome 6.5.2 (CDN, with SRI integrity)
-- Poppins (Google Fonts CDN)
-- Vanilla HTML/CSS — no JS framework, no build step
+- Hand-written CSS in `assets/style.css` — no CSS framework
+- IBM Plex Sans / Serif / Mono (Google Fonts CDN — the only external request)
+- No JavaScript at all, on any page
+- No build step
+
+Bootstrap and FontAwesome were removed in favour of hand-written CSS.
+The nav is four links that wrap on small screens, so it needs no
+JavaScript toggle.
+
+### Design system
+
+Defined as custom properties at the top of `assets/style.css`.
+
+| Token | Value | Use |
+|---|---|---|
+| `--ink` | `#12211C` | Body text, footer background |
+| `--pine` | `#1C3A30` | Masthead, hero, contact panel |
+| `--moss` | `#2F6350` | Links on paper |
+| `--paper` | `#F3F2ED` | Page background |
+| `--brass` / `--brass-lt` | `#8A6524` / `#D9B24C` | **Security-research line only** |
+
+Brass is the single accent and is reserved for the security-research
+line — the research row on the homepage, the research cell in the hero
+index, disclosure callouts, and focus rings. Adding it elsewhere breaks
+the signal it carries.
+
+Type: IBM Plex Sans for headings and UI, IBM Plex Serif for prose, IBM
+Plex Mono for real identifiers only (email addresses, file paths,
+domains) — not for decorative labels.
 
 ## Local preview
 
